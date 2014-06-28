@@ -36,11 +36,11 @@ class TestCase(unittest.TestCase):
             print('E: ', plugin_info.name, plugin_info.error)
         assert True
         
-    def test_analyze(self):
+    '''def test_analyze(self):
         """Test say"""
         descr =Analyzer().analyze_file('/home/ayush/GSOC14/damn-at/damn-test-files/mesh/blender/cube1.blend')
         pretty_print(descr)
-        assert True
+        assert True'''
         
 
 def test_suite():
