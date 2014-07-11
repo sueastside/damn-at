@@ -42,6 +42,7 @@ class TestCase(unittest.TestCase):
         for root, dirs, files in os.walk('../damn-test-files'):
             if len(files) != 0:
                 totest.append(root+'/'+files[0])
+        print "Files to be tested: "+ str(totest)
         for totestfile in totest:         
             if '.git' not in totestfile:
                 descr = Analyzer().analyze_file(totestfile)
@@ -56,13 +57,6 @@ class TestCase(unittest.TestCase):
         except:
             raise AnalyzerFileException('No such file test.jpg')
         
-    @unittest.expectedFailure
-    def test_analyze_noanalyzer(self):
-        """Test say"""
-        try:
-            descr = Analyzer().analyze_file('../test.jpg')
-        except:
-            raise AnalyzerFileException('No such file test.jpg')
 
 def test_suite():
     """Return a list of tests"""
