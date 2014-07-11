@@ -8,7 +8,7 @@ import unittest
 #logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 from damn_at.pluginmanager import DAMNPluginManagerSingleton
-from damn_at.analyzer import Analyzer
+from damn_at.analyzer import Analyzer, AnalyzerException, AnalyzerFileException, AnalyzerUnknownTypeException
 
 def pretty_print(file_descr):
     """Pretty print the file_descr"""
@@ -47,7 +47,22 @@ class TestCase(unittest.TestCase):
                 descr = Analyzer().analyze_file(totestfile)
                 pretty_print(descr)
         assert True
+
+    @unittest.expectedFailure
+    def test_analyze_nofile(self):
+        """Test say"""
+        try:
+            descr = Analyzer().analyze_file('../test.jpg')
+        except:
+            raise AnalyzerFileException('No such file test.jpg')
         
+    @unittest.expectedFailure
+    def test_analyze_noanalyzer(self):
+        """Test say"""
+        try:
+            descr = Analyzer().analyze_file('../test.jpg')
+        except:
+            raise AnalyzerFileException('No such file test.jpg')
 
 def test_suite():
     """Return a list of tests"""
