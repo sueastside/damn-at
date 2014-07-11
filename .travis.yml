@@ -17,7 +17,7 @@ before_install:
 install: 
 - git clone https://github.com/ayush1794/damn-test-files
 - git clone https://github.com/wgwang/thrift.git
-- python3 thrift/lib/py3/setup.py install
+- sudo python3 thrift/lib/py3/setup.py install
 - pip install coveralls
 script: 
 - python setup.py test
