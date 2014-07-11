@@ -14,6 +14,7 @@ before_install:
  - sudo apt-get install -qq python-dev cython libavcodec-dev libavformat-dev libswscale-dev
  - sudo apt-get install -qq python-matplotlib
  - sudo apt-get install -qq sox
+ - sudo apt-get install -qq libimage-exiftool-perl 
 install: 
 - git clone https://github.com/ayush1794/damn-test-files
 - git clone https://github.com/wgwang/thrift.git
