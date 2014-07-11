@@ -36,11 +36,17 @@ class TestCase(unittest.TestCase):
             print('E: ', plugin_info.name, plugin_info.error)
         assert True
         
-    '''def test_analyze(self):
+    def test_analyze(self):
         """Test say"""
-        descr =Analyzer().analyze_file('/home/ayush/GSOC14/damn-at/damn-test-files/mesh/blender/cube1.blend')
-        pretty_print(descr)
-        assert True'''
+        totest = []
+        for root, dirs, files in os.walk('../damn-test-files'):
+            if len(files) != 0:
+                totest.append(root+'/'+files[0])
+        for totestfile in totest:         
+            if '.git' not in totestfile:
+                descr = Analyzer().analyze_file(totestfile)
+                pretty_print(descr)
+        assert True
         
 
 def test_suite():
