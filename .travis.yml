@@ -13,7 +13,9 @@ before_install:
  - sudo apt-get install -qq python-all-dev
  - sudo apt-get install -qq python-dev cython libavcodec-dev libavformat-dev libswscale-dev
  - sudo apt-get install -qq ffmpeg sox libsox-fmt-mp3
- - sudo apt-get install -qq libimage-exiftool-perl 
+ - sudo apt-get install -qq libimage-exiftool-perl
+ - sudo apt-get build-dep python-matplotlib
+ - sudo apt-get install -qq python-matplotlib
 install: 
 - git clone https://github.com/ayush1794/damn-test-files
 - git clone https://github.com/wgwang/thrift.git
