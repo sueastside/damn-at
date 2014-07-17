@@ -19,7 +19,7 @@ config = {
     'version': '0.1',
     'test_suite': 'tests.suite',
     'install_requires': ['Yapsy', 'Image', 'pylint', 'thrift', 'gitpython', 'fusepy',
-         'ffvideo', 'filemagic'],
+         'matplotlib', 'filemagic'],
     'packages': ['damn_at'],
     'scripts': [],
     'name': 'damn_at',
