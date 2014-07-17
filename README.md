@@ -22,8 +22,8 @@ Install Blender, Git, Pip and other initial python requirements
     sudo apt-get install -qq python-pip
     sudo apt-get install python-software-properties
     sudo apt-get install python-dev cython libavcodec-dev libavformat-dev libswscale-dev
-    sudo apt-get install python-matplotlib
-    sudo apt-get install sox
+    sudo apt-get install sox libsox-fmt-mp3
+    sudo apt-get install ffmpeg
  ```
  
 Install Thirft globally for python3
