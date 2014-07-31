@@ -24,6 +24,7 @@ Install Blender, Git, Pip and other initial python requirements
     sudo apt-get install python-dev cython libavcodec-dev libavformat-dev libswscale-dev
     sudo apt-get install sox libsox-fmt-mp3
     sudo apt-get install ffmpeg
+    sudo apt-get build-dep python-matplotlib
  ```
  
 Install Thirft globally for python3
@@ -33,7 +34,12 @@ Install Thirft globally for python3
     python3 setup.py install
     cd ../../..
  ```
- 
+
+Install matplotlib
+```
+    pip install matplotlib
+```
+
 Create a virtualenv and activate it
  ```
     virtualenv env
