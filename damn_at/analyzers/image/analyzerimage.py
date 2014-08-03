@@ -31,7 +31,7 @@ class GenericImageAnalyzer(IAnalyzer):
         
         image_mimetype = mimetypes.guess_type(an_uri)[0]
         
-        asset_descr = AssetDescription(asset = AssetId(subname = 'main layer', mimetype = image_mimetype, file = fileid))
+        asset_descr = AssetDescription(asset = AssetId(subname = os.path.basename(an_uri), mimetype = image_mimetype, file = fileid))
 
         try:
             pro = subprocess.Popen(['exiftool',an_uri], stdout=subprocess.PIPE,
