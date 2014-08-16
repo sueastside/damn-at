@@ -139,7 +139,7 @@ Inspect
 
 Transcode
  ```
-    damn_at-transcode /tmp/damn/8c8065ae5590cb5d669426651ce229ed11c5f07d crate10b.jpg image/jpeg -h
+    damn_at-transcode /tmp/damn/8c8065ae5590cb5d669426651ce229ed11c5f07d "main layer" image/jpeg -h
  ```
   Output:
  ```
