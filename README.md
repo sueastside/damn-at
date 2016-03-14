@@ -15,7 +15,7 @@ Installation
 -----
 Install Blender, Git, Pip and other initial python requirements
  ```
-    sudo add-apt-repository ppa:irie/blender
+    sudo add-apt-repository ppa:thomas-schiex/blender
     sudo apt-get update -qq
     sudo apt-get install -qq blender
     sudo apt-get install -qq git
@@ -42,7 +42,7 @@ Install Thrift globally for python3
  ```
     git clone https://github.com/peragro/peragro-at.git
  ```
-  
+
  Install peragro-at dependencies for python 3
  ```
     cd peragro-at
@@ -55,7 +55,7 @@ Install Thrift globally for python3
     virtualenv env
     source env/bin/activate
  ```
- 
+
 Install matplotlib
 ```
     pip install matplotlib
