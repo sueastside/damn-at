@@ -100,14 +100,17 @@ class DAMNPluginManager(PluginManager):
         directory = os.path.dirname(os.path.abspath(__file__))
         PluginManager.__init__(
             self,
-            directories_list=[os.path.join(directory, 'analyzers'), os.path.join(directory, 'transcoders'), os.path.join(directory, 'repositories')],
+            directories_list=[
+                os.path.join(directory, 'analyzers'), 
+                os.path.join(directory, 'transcoders')
+            ], 
             categories_filter={
                 "Analyzer": IAnalyzer,
                 "Transcoder": ITranscoder,
                 "MetaDataStore": IMetaDataStore,
                 "Repository": IRepository,
             },
-            plugin_info_ext=('analyzer', 'transcoder', 'repository',)
+            plugin_info_ext=('analyzer', 'transcoder',) 
         )
 
     def collect_plugins(self):
