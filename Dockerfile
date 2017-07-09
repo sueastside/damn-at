@@ -57,10 +57,10 @@ RUN curl http://acousticbrainz.org/static/download/essentia-extractor-v2.1_beta2
     && mv /tmp/streaming_extractor_music /usr/local/bin/
 
 #Download peragro-test-data for troubleshooting
-#RUN git clone https://github.com/peragro/peragro-test-files.git /opt/peragro-test-files
+RUN git clone https://github.com/peragro/peragro-test-files.git /opt/peragro-test-files
 
 #download and setup peragro-at
-#ARG CACHEBUST=1
-#RUN git clone https://github.com/peragro/peragro-at.git /opt/peragro-at
-#RUN cd /opt/peragro-at && python3 setup.py develop
-#RUN pt a /opt/peragro-test-files/mesh/blender/cube1.blend
+ARG CACHEBUST=1
+RUN git clone https://github.com/peragro/peragro-at.git /opt/peragro-at
+RUN cd /opt/peragro-at && python3 setup.py develop
+RUN pt a /opt/peragro-test-files/mesh/blender/cube1.blend
