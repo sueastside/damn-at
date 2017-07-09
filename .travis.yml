@@ -19,7 +19,7 @@ before_install:
  - sudo apt-get install libchromaprint-tools
 install:
 - pip install matplotlib
-- git clone https://github.com/peragro/peragro-test-files
+- git clone https://github.com/peragro/peragro-test-files.git
 - git clone -b 0.10.0 https://github.com/apache/thrift.git
 - cd thrift/lib/py/
 - python3 setup.py install
