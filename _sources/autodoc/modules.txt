@@ -1,7 +1,0 @@
-damn_at
-=======
-
-.. toctree::
-   :maxdepth: 4
-
-   damn_at
