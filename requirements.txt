@@ -1,0 +1,1 @@
+pip install -e git+https://github.com/apache/thrift/tree/0.10.0
